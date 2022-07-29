@@ -1,0 +1,142 @@
+{ "Questions" : [
+    {
+        "number": 1,
+        "test": "You suffer a financial setback. To what extent can you influence this situation?",
+        "startRange": "Not at all",
+        "endRange": "Completely",
+        "dimension": "control"
+    },
+    {
+        "number": 2,
+        "test": "You are overlooked for a promotion. To what extent do you feel responsible for improving the situation?",
+        "startRange": "Not responsible at all",
+        "endRange": "Completely responsible",
+        "dimension": "ownership"
+    },
+    {
+        "number": 3,
+        "test": "You are criticized for a big project that you just completed. The consequences of this situation will:",
+        "startRange": "Affect all aspects of my life",
+        "endRange": "Be limited to this situation",
+        "dimension": "reach"
+    },
+    {
+        "number": 4,
+        "test": "You accidentally delete an important email. The consequences of this situation will:",
+        "startRange": "Last forever",
+        "endRange": "Quickly pass",
+        "dimension": "endurance"
+    },
+    {
+        "number": 5,
+        "test": "The high-priority project you are working on gets canceled. The consequences of this situation will:",
+        "startRange": "Affect all aspects of my life",
+        "endRange": "Be limited to this situation",
+        "dimension": "reach"
+    },
+    {
+        "number": 6,
+        "test": "Someone you respect ignores your attempt to discuss an important issue. To what extent do you feel responsible for improving this situation?",
+        "startRange": "Not responsible at all",
+        "endRange": "Completely responsible",
+        "dimension": "ownership"
+    },
+    {
+        "number": 7,
+        "test": "People respond unfavorably to your latest ideas. To what extent can you influence this situation?",
+        "startRange": "Not at all",
+        "endRange": "Completely",
+        "dimension": "control"
+    },
+    {
+        "number": 8,
+        "test": "You are unable to take a much-needed vacation. The consequences of this situation will:",
+        "startRange": "Last forever",
+        "endRange": "Quickly pass",
+        "dimension": "endurance"
+    },
+    {
+        "number": 9,
+        "test": "You hit every red light on your way to an important appointment. The consequences of this situation will:",
+        "startRange": "Affect all aspects of my life",
+        "endRange": "Be limited to this situation",
+        "dimension": "reach"
+    },
+    {
+        "number": 10,
+        "test": "After extensive searching, you cannot find an important document. The consequences of this situation will:",
+        "startRange": "Last forever",
+        "endRange": "Quickly pass",
+        "dimension": "endurance"
+    },
+    {
+        "number": 11,
+        "test": "You workplace is understaffed. To what extent do you feel responsible for improving this situation?",
+        "startRange": "Not responsible at all",
+        "endRange": "Completely responsible",
+        "dimension": "ownership"
+    },
+    {
+        "number": 12,
+        "test": "You miss an important appointment. The consequences of this situation will:",
+        "startRange": "Affect all aspects of my life",
+        "endRange": "Be limited to this situation",
+        "dimension": "reach"
+    },
+    {
+        "number": 13,
+        "test": "You personal and work obligations are out of balance. To what extent can you influence this situation?",
+        "startRange": "Not at all",
+        "endRange": "Completely",
+        "dimension": "control"
+    },
+    {
+        "number": 14,
+        "test": "You never seem to have enough money. The consequences of this situation will:",
+        "startRange": "Last forever",
+        "endRange": "Quickly pass",
+        "dimension": "endurance"
+    },
+    {
+        "number": 15,
+        "test": "You are not exercising regularly though you know you should. To what extent can you influence this situation?",
+        "startRange": "Not at all",
+        "endRange": "Completely",
+        "dimension": "control"
+    },
+    {
+        "number": 16,
+        "test": "Your organization is not meeting its goals. To what extent do you feel responsible for improving this situation?",
+        "startRange": "Not responsible at all",
+        "endRange": "Completely responsible",
+        "dimension": "ownership"
+    },
+    {
+        "number": 17,
+        "test": "Your computer crashed for the third time this week. To what extent can you influence this situation?",
+        "startRange": "Not at all",
+        "endRange": "Completely",
+        "dimension": "control"
+    },
+    {
+        "number": 18,
+        "test": "The meeting you are in is a total waste of time. To what extent do you feel responsible for improving this situation?",
+        "startRange": "Not responsible at all",
+        "endRange": "Completely responsible",
+        "dimension": "ownership"
+    },
+    {
+        "number": 19,
+        "test": "You lost something that is important to you. The consequences of this situation will:",
+        "startRange": "Last forever",
+        "endRange": "Quickly pass",
+        "dimension": "endurance"
+    },
+    {
+        "number": 20,
+        "test": "Your boss adamantly disagrees with your decision. The consequences of this situation will:",
+        "startRange": "Affect all aspects of my life",
+        "endRange": "Be limited to this situation",
+        "dimension": "reach"
+    }
+]}
