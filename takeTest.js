@@ -115,8 +115,6 @@ getQuestions()
             var reach = 0;
             var endurance = 0;
             for (let i=0; i<NUM_OF_QUESTIONS; i++){
-                console.log(testClassArr[i])
-                console.log(i)
                 if (testClassArr[i].dimension == "control"){
                     control += parseInt(formProps[`range${i+1}`]);
                 } else if (testClassArr[i].dimension == "ownership"){
@@ -134,6 +132,7 @@ getQuestions()
             const resultSection = document.createElement("section");
             const scoreSpan = document.createElement("span");
             const messageP = document.createElement("p");
+            const explanationSection = document.createElement("section");
             
             // Classifying into average, higher, or lower
             scoreSpan.innerHTML = `
@@ -152,45 +151,39 @@ getQuestions()
             } else if (total < Math.floor(AVERAGE_ARP_SCORE)) {
                 messageP.innerHTML = "You have an Adversity Response Profile score lower than average.";
             }
+
+            const explanation = `
+                <h3>C = Control</h3>
+                <p>
+                    To what extent can you influence the situation?
+                    How much control do you perceive you have?
+                    Those with higher AQs perceive they have significantly more control and influence in adverse situations than do those with lower AQs.  Even in situations that appear overwhelming or out of their hands, those with higher AQs find some facet of the situation they can influence.  Those with lower AQs respond as if they have little or no control and often give up.
+                </p>
+                <h3>O = Ownership</h3>
+                <p>
+                    To what extent do you hold yourself responsible for improving this situation?
+                    To what extent are you accountable to play some role in making it better?
+                    Accountability is the backbone of action.  Those with higher AQs hold themselves accountable for dealing with situations regardless of their cause.  Those with lower AQs deflect accountability and most often feel victimized and helpless.
+                </p>
+                <h3>R = Reach</h3>
+                <p>
+                    How far does the fallout of this situation reach into other areas of your work or life?
+                    To what extent does the adversity extend beyond the situation at hand?
+                    Keeping the fallout under control and limiting the reach of adversity is essential for efficient and effective problem solving.  Those with higher AQs keep setbacks and challenges in their place, not letting them infest the healthy areas of their work and lives.  Those with lower AQs tend to catastrophize, allowing a setback in one area to bleed into other, unrelated areas and become destructive.
+                </p>
+                <h3>E = Endurance</h3>
+                <p>
+                    How long will the adversity endure?
+                    Seeing beyond even enormous difficulties is an essential skill for maintaining hope.  Those with higher AQs have the uncanny ability to see past the most interminable difficulties and maintain hope and optimism.  Those with lower AQs see adversity as dragging on indefinitely, if not permanently.
+                </p>
+                <br/>
+                <a href=http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html?fbclid=IwAR1V6du7-E6MRCLfLfGhmeg4Z3gwbzq5H1hmtUQZ-0oSYx02n3yeusfgBx0> (www.winstonbrill.com) </a>
+            `;
+            explanationSection.innerHTML = explanation;
             
             main.append(resultSection);
             resultSection.append(messageP);
             resultSection.append(scoreSpan);
-            resultSection.append(explainCORE());
+            resultSection.append(explanationSection);
         }
-
-        const explainCORE = () => {
-            const explanation = `
-            <h3>C = Control</h3>
-            <p>
-                To what extent can you influence the situation?
-                How much control do you perceive you have?
-                Those with higher AQs perceive they have significantly more control and influence in adverse situations than do those with lower AQs.  Even in situations that appear overwhelming or out of their hands, those with higher AQs find some facet of the situation they can influence.  Those with lower AQs respond as if they have little or no control and often give up.
-            </p>
-            <h3>O = Ownership</h3>
-            <p>
-                To what extent do you hold yourself responsible for improving this situation?
-                To what extent are you accountable to play some role in making it better?
-                Accountability is the backbone of action.  Those with higher AQs hold themselves accountable for dealing with situations regardless of their cause.  Those with lower AQs deflect accountability and most often feel victimized and helpless.
-            </p>
-            <h3>R = Reach</h3>
-            <p>
-                How far does the fallout of this situation reach into other areas of your work or life?
-                To what extent does the adversity extend beyond the situation at hand?
-                Keeping the fallout under control and limiting the reach of adversity is essential for efficient and effective problem solving.  Those with higher AQs keep setbacks and challenges in their place, not letting them infest the healthy areas of their work and lives.  Those with lower AQs tend to catastrophize, allowing a setback in one area to bleed into other, unrelated areas and become destructive.
-            </p>
-            <h3>E = Endurance</h3>
-            <p>
-                How long will the adversity endure?
-                Seeing beyond even enormous difficulties is an essential skill for maintaining hope.  Those with higher AQs have the uncanny ability to see past the most interminable difficulties and maintain hope and optimism.  Those with lower AQs see adversity as dragging on indefinitely, if not permanently.
-            </p>
-            <br/>
-            <a href=http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html?fbclid=IwAR1V6du7-E6MRCLfLfGhmeg4Z3gwbzq5H1hmtUQZ-0oSYx02n3yeusfgBx0> (www.winstonbrill.com) </a>
-            `;
-            const explanationSection = document.createElement("section");
-            explanationSection.innerHTML = explanation;
-            return explanationSection;
-        }
-        // console.log()
     })
-
