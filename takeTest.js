@@ -1,4 +1,4 @@
-// Disable button after clicked once
+// Disable test button after clicked once
 const testBtn = document.querySelector("#testBtn");
 testBtn.addEventListener("click", ()=>{
     testBtn.setAttribute("disabled", "");
@@ -57,6 +57,7 @@ getQuestions()
         
             for (let i=0; i<NUM_OF_QUESTIONS; i++){
                 testClassLi[i] = document.createElement("li");
+                // testClassLi[i].classList.add("wholeItem");
         
                 // Place test question in p 
                 let p = document.createElement("p");
@@ -77,9 +78,14 @@ getQuestions()
                     for (let j=0; j<5; j++){
                         radio[j] = document.createElement("input");
                         radio[j].setAttribute("type", "radio");
-                        radio[j].setAttribute("name", `range${i+1}`)
+                        radio[j].setAttribute("name", `range${i+1}`);
                         radio[j].setAttribute("id", `radio${i+1}-${j+1}`);
                         radio[j].setAttribute("value", `${j+1}`);
+                        radio[j].setAttribute("onInput", "removeWarn(this)");
+                        if (j==0){
+                            radio[j].setAttribute("required", "");
+                            radio[j].setAttribute("oninvalid", "warn(this)");
+                        }
                         range[i].append(radio[j]);
                     }
         
@@ -99,6 +105,7 @@ getQuestions()
             // Create finish button
             const finishBtn = document.createElement("input");
             finishBtn.setAttribute("type", "submit");
+            finishBtn.setAttribute("id", "finishBtn");
             finishBtn.setAttribute("value", "Finish");
             testForm.append(finishBtn)
         }
@@ -107,8 +114,14 @@ getQuestions()
             e.preventDefault();
             const formData = new FormData(e.target);
             const formProps = Object.fromEntries(formData);
+
+            // Disable finish button after click
+            const finishBtn = document.querySelector("#finishBtn");
+            finishBtn.addEventListener("click", ()=>{
+                finishBtn.setAttribute("disabled", "");
+            })
         
-            // Algorithm for getting the score
+            // Collects dimension score and total score
             var total = 0;
             var control = 0;
             var ownership = 0;
@@ -187,3 +200,12 @@ getQuestions()
             resultSection.append(explanationSection);
         }
     })
+
+function warn(rangeE) {
+    console.log(rangeE)
+    rangeE.parentElement.parentElement.classList.add("bg-blush");
+}
+
+function removeWarn(rangeE) {
+    rangeE.parentElement.parentElement.classList.remove("bg-blush");
+}
