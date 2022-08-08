@@ -145,6 +145,7 @@ getQuestions()
             const resultSection = document.createElement("section");
             const scoreSpan = document.createElement("span");
             const messageP = document.createElement("p");
+            const fbShare = document.createElement("div");
             const explanationSection = document.createElement("section");
             
             // Classifying into average, higher, or lower
@@ -195,8 +196,7 @@ getQuestions()
             explanationSection.innerHTML = explanation;
 
             // Facebook share button
-            const FBShare = document.createElement("div");
-            FBShare.innerHTML = `
+            fbShare.innerHTML = `
                 <!-- Share link -->
                 <div class="fb-share-button" data-href="https://menchb.github.io/aq-test/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmenchb.github.io%2Faq-test%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                 `;
@@ -204,7 +204,7 @@ getQuestions()
             main.append(resultSection);
             resultSection.append(messageP);
             resultSection.append(scoreSpan);
-            resultSection.append(FBShare);
+            resultSection.append(fbShare);
             resultSection.append(explanationSection);
         }
     })
