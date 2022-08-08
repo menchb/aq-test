@@ -2,8 +2,18 @@
 <html>
 <head>
     <title>AQ Test | Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="What's your Adversity Quotient (AQ) Score? Take this free test by Paul Stoltz, Ph.D. Get your result automatically.">
+    <meta name="keywords" content="AQ test, Adversity quotient test">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./takeTest.js"></script>
     <style>
+        #featuredImg {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;;
+        }
         .bg-blush {
             background: lavenderblush;
             border-radius: 25px;
@@ -11,9 +21,16 @@
     </style>
 </head>
 <body>
+
+    <!-- Facebook's JS SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="wbP4lM79"></script>
+
+    <!-------------------------------------------------------------------------------->
+    <img id="featuredImg" src="./pexels-ekaterina-bolovtsova-6192331.png" alt="">
     <h1>Adversity Quotient (AQ) Test</h1>
     <p>
-        <br/>by Paul Stoltz, Ph.D. 
+        <br/>What's your Adversity Quotient (AQ) Score? Take this free test by Paul Stoltz, Ph.D. Get your result automatically.
         <br/>Dr. Stoltz is president and CEO of <a href="https://www.peaklearning.com/">PEAK Learning, Inc.</a>, a consulting and research firm in San Luis Obispo, CA.
     </p>
 
