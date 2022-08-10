@@ -44,6 +44,14 @@ const getQuestions = () => {
 }
 
 var displayTest;
+
+const AVERAGE_ARP_SCORE = 147.5
+const resultSection = document.createElement("section");
+const scoreSpan = document.createElement("span");
+const messageP = document.createElement("p");
+const fbShare = document.createElement("div");
+const explanationSection = document.createElement("section");
+
 getQuestions()
     .then( () => {
         displayTest = () => {
@@ -52,6 +60,7 @@ getQuestions()
             testForm.addEventListener("submit", handleSubmit);
         
             var testOl = document.createElement("ol");
+            testOl.setAttribute("id", "testOl")
             var testClassLi = [];
             var range = [];
         
@@ -114,9 +123,11 @@ getQuestions()
             e.preventDefault();
             const formData = new FormData(e.target);
             const formProps = Object.fromEntries(formData);
+            showResult(formProps);
+        };
 
+        function showResult(formProps){
             // Disable finish button after click
-            const finishBtn = document.querySelector("#finishBtn");
             finishBtn.addEventListener("click", ()=>{
                 finishBtn.setAttribute("disabled", "");
             })
@@ -140,23 +151,22 @@ getQuestions()
                 total += parseInt(formProps[`range${i+1}`]);
             }
             total = total * 2;
-        
-            const AVERAGE_ARP_SCORE = 147.5
-            const resultSection = document.createElement("section");
-            const scoreSpan = document.createElement("span");
-            const messageP = document.createElement("p");
-            const fbShare = document.createElement("div");
-            const explanationSection = document.createElement("section");
             
             // Classifying into average, higher, or lower
             scoreSpan.innerHTML = `
-                <br/>Average score: ${AVERAGE_ARP_SCORE}
-                <br/>Your score: ${total}
-                <br/>CORE Score breakdown:
-                <br/>Your Control (C) score: ${control}
-                <br/>Your Ownership (O) score: ${ownership}
-                <br/>Your Reach (R) score: ${reach}
-                <br/>Your Endurance (E) score: ${endurance}
+                <p>Average score: ${AVERAGE_ARP_SCORE}</p>
+                <p>Your score: <span>${total}</span></p>
+                <p>CORE Score breakdown:</p>
+                <div>
+                    <span>Control:</span>
+                    <span>Ownership:</span>
+                    <span>Reach:</span>
+                    <span>Endurance:</span>
+                    <span>${control}</span>
+                    <span>${ownership}</span>
+                    <span>${reach}</span>
+                    <span>${endurance}</span>
+                </div>
             `;
             if (total > Math.ceil(AVERAGE_ARP_SCORE)) {
                 messageP.innerHTML = "You have an Adversity Response Profile score higher than average!";
@@ -197,15 +207,17 @@ getQuestions()
 
             // Facebook share button
             fbShare.innerHTML = `
-                <!-- Share link -->
-                <div class="fb-share-button" data-href="https://menchb.github.io/aq-test/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmenchb.github.io%2Faq-test%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                `;
+                <a id="fbShareBtn" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmenchb.github.io%2Faq-test%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore block text-center">Share on Facebook</a>
+            `;
+            styleBtn(fbShare);
 
             main.append(resultSection);
             resultSection.append(messageP);
             resultSection.append(scoreSpan);
             resultSection.append(fbShare);
             resultSection.append(explanationSection);
+
+            styleResults();
         }
     })
 

@@ -12,58 +12,60 @@
     <meta property="og:description" content="Take this free test by Paul Stoltz, Ph.D. Get your result automatically." />
     <meta property="og:image" content="https://menchb.github.io/aq-test/pexels-ekaterina-bolovtsova-6192331.png" />
 
+    <script async src="style.js"></script>
     <script defer src="./takeTest.js"></script>
+    <script async src="https://cdn.tailwindcss.com"></script>
     <style>
-        #featuredImg {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 1200px;;
-        }
         .bg-blush {
             background: lavenderblush;
             border-radius: 25px;
         }
     </style>
 </head>
-<body>
+
+<body class="font-semibold text-left text-teal-900 bg-teal-50">
 
     <!-- Facebook's JS SDK -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="wbP4lM79"></script>
 
     <!-------------------------------------------------------------------------------->
-    <img id="featuredImg" src="./pexels-ekaterina-bolovtsova-6192331.png" alt="">
-    <h1>Adversity Quotient (AQ) Test</h1>
-    <p>
-        <br/>What's your Adversity Quotient (AQ) Score? Take this free test by Paul Stoltz, Ph.D. Get your result automatically.
-        <br/>Dr. Stoltz is president and CEO of <a href="https://www.peaklearning.com/">PEAK Learning, Inc.</a>, a consulting and research firm in San Luis Obispo, CA.
-    </p>
+    <div class="bg-black">
+        <img class="lg:h-screen mx-auto" id="featuredImg" src="./pexels-ekaterina-bolovtsova-6192331.png" alt="">
+    </div>
 
-    <main>
-        <article>
-            <h2>What is Adversity Quotient (AQ)</h2>
-            <p>
-                "An adversity quotient is a person's ability to manage difficulties and transform obstacles into opportunities."
-            </p>
-            <p>
-                (Hurlock, 2000 as cited in Safi'i, Muttaqin, Sukino, Hamzah, Chotimah, Junaris and Rifa'i, 2021)
-            </p>
-            <p>
-                It is one of the four main intelligence types, the other three being Intelligence Quotient (IQ), Emotional Quotient (EQ), and Social Quotient (SQ).
-            </p>
-        </article>
-        <button id="testBtn" onclick="displayTest()">Take AQ Test</button>
-    </main>
+    <div class="mx-5">
 
-    <section id="references">
-        <h2>References</h2>
-        <p>
-            Safi'i, A., Muttaqin, I., Sukino, Hamzah, N., Chotimah, C., Junaris, I., & Rifa'i, M. K. (2021). The effect of the adversity quotient on student performance, student learning autonomy and student achievement in the COVID-19 pandemic era: evidence from Indonesia. Heliyon, 7(12), e08510. https://doi.org/10.1016/j.heliyon.2021.e08510
-        </p>
-        <p>
-            Stoltz, P. (2001, February). Article 517- Your Adversity Quotient. Winston J. Brill &amp; Associates. Retrieved August 6, 2022, from http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html?fbclid=IwAR1V6du7-E6MRCLfLfGhmeg4Z3gwbzq5H1hmtUQZ-0oSYx02n3yeusfgBx0 
-        </p>
-    </section>
+        <main class="my-7">
+            <div class="text-center my-14">
+                <h1 class="text-4xl font-thin">Adversity Quotient (AQ) Test</h1>
+                <p>
+                    <br/>What's your Adversity Quotient (AQ) Score? Take this free test by Paul Stoltz, Ph.D. Get your result automatically.
+                    <br/><br/>Dr. Stoltz is president and CEO of <a href="https://www.peaklearning.com/">PEAK Learning, Inc.</a>, a consulting and research firm in San Luis Obispo, CA.
+                </p>
+            </div>
+
+            <article class="my-7">
+                <h2 class="font-thin text-3xl">What is Adversity Quotient (AQ)</h2>
+                <p>
+                    <br/>"An adversity quotient is a person's ability to manage difficulties and transform obstacles into opportunities."
+                    <span class="text-teal-900/75">
+                        (Hurlock, 2000 as cited in Safi'i, Muttaqin, Sukino, Hamzah, Chotimah, Junaris and Rifa'i, 2021)
+                    </span>
+                    <br/><br/>It is one of the four main intelligence types, the other three being Intelligence Quotient (IQ), Emotional Quotient (EQ), and Social Quotient (SQ).
+                </p>
+            </article>
+
+            <button id="testBtn" onclick="displayTest()">Take AQ Test</button>
+        </main>
+
+        <section class="break-words" id="references">
+            <h2 class="font-light text-2xl">References:</h2>
+            <br/><p>Safi'i, A., Muttaqin, I., Sukino, Hamzah, N., Chotimah, C., Junaris, I., & Rifa'i, M. K. (2021). The effect of the adversity quotient on student performance, student learning autonomy and student achievement in the COVID-19 pandemic era: evidence from Indonesia. Heliyon, 7(12), e08510. https://doi.org/10.1016/j.heliyon.2021.e08510</p>
+            <br/><p>Stoltz, P. (2001, February). Article 517- Your Adversity Quotient. Winston J. Brill &amp; Associates. Retrieved August 6, 2022, from http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html</p>
+            <br/>
+        </section>
+    </div>
+
 </body>
 </html>
