@@ -7,5 +7,5 @@ Roadmap
 - [] About Page
 - [] Privacy
 - [] Legal
-- [] Share buttons
+- [X] Share buttons
 - [] Language support
