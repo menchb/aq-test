@@ -38,7 +38,6 @@ testBtn.addEventListener("click", () => {
 
 function styleResults () {
     styleBtn(fbShare);
-    // explanationSection.classList.add("")
     messageP.classList.add("text-center");
     scoreSpan.classList.add("text-center");
     scoreSpan.querySelector("span p:nth-child(2)").classList.add("my-7");
@@ -53,6 +52,8 @@ function styleResults () {
             scores[i].classList.add("text-4xl", "font-light");
         }   
     }
-
+    explanationSection.querySelectorAll("h3").forEach((title) => {
+        title.classList.add("font-light", "text-3xl", "mt-7")
+    })
     
 }
