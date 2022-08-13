@@ -51,6 +51,7 @@ const scoreSpan = document.createElement("span");
 const messageP = document.createElement("p");
 const fbShare = document.createElement("div");
 const explanationSection = document.createElement("section");
+const computationSection = document.createElement("section");
 
 getQuestions()
     .then( () => {
@@ -151,6 +152,12 @@ getQuestions()
                 total += parseInt(formProps[`range${i+1}`]);
             }
             total = total * 2;
+
+            computationSection.innerHTML = `
+                At every question, the first radio button equates to a score of one,
+                while the fifth one equates to five. Add all the scores from all the questions,
+                then multiply it by two. The result is your ARP, or Adversity Response Profile.
+            `;
             
             // Classifying into average, higher, or lower
             scoreSpan.innerHTML = `
@@ -212,6 +219,7 @@ getQuestions()
             styleBtn(fbShare);
 
             main.append(resultSection);
+            resultSection.append(computationSection);
             resultSection.append(messageP);
             resultSection.append(scoreSpan);
             resultSection.append(fbShare);
@@ -222,9 +230,9 @@ getQuestions()
     })
 
 function warn(rangeE) {
-    rangeE.parentElement.parentElement.classList.add("bg-blush");
+    rangeE.parentElement.parentElement.classList.add("bg-rose-50");
 }
 
 function removeWarn(rangeE) {
-    rangeE.parentElement.parentElement.classList.remove("bg-blush");
+    rangeE.parentElement.parentElement.classList.remove("bg-rose-50");
 }

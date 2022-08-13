@@ -15,7 +15,7 @@ testBtn.addEventListener("click", () => {
 
     const testClassLi = document.querySelectorAll("#testOl li");
     testClassLi.forEach((testClassLi) => {
-        testClassLi.classList.add("my-9");
+        testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg");
     })
 
     const answerDivs = document.querySelectorAll("#testOl li div");
@@ -39,6 +39,7 @@ testBtn.addEventListener("click", () => {
 function styleResults () {
     styleBtn(fbShare);
     resultSection.classList.add("my-9")
+    computationSection.classList.add("my-9");
     messageP.classList.add("text-center");
     scoreSpan.classList.add("text-center");
     scoreSpan.querySelector("span p:nth-child(2)").classList.add("my-7");
