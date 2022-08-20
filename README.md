@@ -33,11 +33,9 @@ Contributors who wish to help achieve the project's goals or improve the project
 
 You may fork and clone this repository to your local computer and create pull requests. The website uses the basics of the web—HTML, CSS, and JavaScript—with the Tailwind.css framework.
 
-To preview the website with your changes, you may use [Live Server, a Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
-Id: ritwickdey.LiveServer
-Description: Launch a development local Server with live reload feature for static & dynamic pages
-Version: 5.7.5
-Publisher: Ritwick Dey
+To preview the website with your changes, you may use [Live Server, a Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by Ritwick Dey. \
+**Id:** ritwickdey.LiveServer \
+**Description:** Launch a development local Server with live reload feature for static & dynamic pages.
 
 ## License
 
