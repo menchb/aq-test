@@ -4,7 +4,7 @@ links.forEach((link) => {
 })
 
 function styleBtn(button) {
-   button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-teal-900", "bg-teal-100", "rounded-lg", "border", "border-teal-700", "transition", "hover:bg-teal-600", "hover:text-teal-50", "hover:border-teal-600")
+   button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-teal-900", "bg-teal-100", "rounded-full", "drop-shadow", "border", "border-teal-700", "transition", "hover:bg-teal-600", "hover:text-teal-50", "hover:border-teal-600", "hover:drop-shadow-xl")
 };
 
 styleBtn(testBtn);
