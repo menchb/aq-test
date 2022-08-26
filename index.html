@@ -27,7 +27,7 @@
   </style>
 </head>
 
-<body class="font-semibold text-left text-teal-900 bg-cyan-50">
+<body class="font-semibold text-left bg-teal-700 text-teal-50">
   <!-- Facebook's JS SDK -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
@@ -39,7 +39,7 @@
       alt="What's your AQ Background Image">
   </div>
 
-  <div class="text-white text-center mb-14 bg-gradient-to-b from-black to-cyan-900 rounded-b-full drop-shadow-xl pb-20 sm:pb-32">
+  <div class="text-cyan-50 text-center mb-14 bg-gradient-to-b from-black to-teal-900 rounded-b-full drop-shadow-xl pb-20 sm:pb-32">
     <div class="mx-10 sm:mx-24">
       <h1 class="text-4xl font-thin">Adversity Quotient (AQ) Test</h1>
       <p class="mt-5">
@@ -54,35 +54,41 @@
     </div>
   </div>
 
-  <div class="mx-5 lg-w-lg lg:mx-auto">
-    <main class="mb-7">
-      <article class="mx-5 lg-w-lg lg:mx-auto my-7 bg-white rounded drop-shadow p-9">
-        <h2 class="font-thin text-3xl">What is Adversity Quotient (AQ)</h2>
-        <p>
-          <br /> "An adversity quotient is a person's ability to manage difficulties and transform obstacles into
-          opportunities."
-          <span class="text-teal-900/75">
-            (Hurlock, 2000 as cited in Safi'i, Muttaqin, Sukino, Hamzah, Chotimah, Junaris and Rifa'i, 2021)
-          </span>
-          <br /><br />It is one of the four main intelligence types, the other three being Intelligence Quotient (IQ),
-          Emotional Quotient (EQ), and Social Quotient (SQ).
-        </p>
-      </article>
+  <div class=" ">
+    <div class="bg-black shadow-inner mb-20 text-cyan-50">
+      <div class="mx-5 rounded-full pb-8">
+        <main class="mb-7  lg-w-lg lg:mx-auto">
+          <article class="my-7 p-9">
+            <h2 class="font-thin text-3xl">What is Adversity Quotient (AQ)</h2>
+            <p>
+              <br /> "An adversity quotient is a person's ability to manage difficulties and transform obstacles into
+              opportunities."
+              <span class="text-cyan-50/50">
+                (Hurlock, 2000 as cited in Safi'i, Muttaqin, Sukino, Hamzah, Chotimah, Junaris and Rifa'i, 2021)
+              </span>
+              <br /><br />It is one of the four main intelligence types, the other three being Intelligence Quotient (IQ),
+              Emotional Quotient (EQ), and Social Quotient (SQ).
+            </p>
+          </article>
 
-      <button id="testBtn" onclick="displayTest()" class="cursor-pointer">Take AQ Test</button>
-    </main>
+          <button id="testBtn" onclick="displayTest()" class="cursor-pointer">Take AQ Test</button>
+        </main>
+      </div>
+    </div>
 
-    <section class="break-words text-slate-400 mb-9 mx-5 lg-w-lg lg:mx-auto" id="references">
-      <h2 class="font-light text-2xl">References:</h2>
-      <br />
-      <p>Safi'i, A., Muttaqin, I., Sukino, Hamzah, N., Chotimah, C., Junaris, I., & Rifa'i, M. K. (2021). The effect of
-        the adversity quotient on student performance, student learning autonomy and student achievement in the COVID-19
-        pandemic era: evidence from Indonesia. Heliyon, 7(12), e08510. https://doi.org/10.1016/j.heliyon.2021.e08510</p>
-      <br />
-      <p>Stoltz, P. (2001, February). Article 517- Your Adversity Quotient. Winston J. Brill &amp; Associates. Retrieved
-        August 6, 2022, from
-        http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html</p>
-      <br />
+    <section class="shadow-inner bg-gradient-to-t from-black to-teal-900 break-words text-cyan-50/50 pb-9 rounded-t-full" id="references">
+      <div class="pt-16 mx-14 sm:mx-24">
+        <h2 class="font-light text-2xl text-center">References:</h2>
+        <br />
+        <p>Safi'i, A., Muttaqin, I., Sukino, Hamzah, N., Chotimah, C., Junaris, I., & Rifa'i, M. K. (2021). The effect of
+          the adversity quotient on student performance, student learning autonomy and student achievement in the COVID-19
+          pandemic era: evidence from Indonesia. Heliyon, 7(12), e08510. https://doi.org/10.1016/j.heliyon.2021.e08510</p>
+        <br />
+        <p>Stoltz, P. (2001, February). Article 517- Your Adversity Quotient. Winston J. Brill &amp; Associates. Retrieved
+          August 6, 2022, from
+          http://www.winstonbrill.com/bril001/html/article_index/articles/501-550/article517_body.html</p>
+        <br />
+      </div>
     </section>
   </div>
 

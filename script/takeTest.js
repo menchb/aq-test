@@ -155,7 +155,7 @@ getQuestions()
 
       computationSection.innerHTML = `
                 At every question, the first radio button equates to a score of one,
-                while the fifth one equates to five. Add all the scores from all the questions,
+                while the fifth equates to five. Add all the scores from all the questions,
                 then multiply it by two. The result is your ARP, or Adversity Response Profile.
             `;
 
@@ -230,9 +230,9 @@ getQuestions()
   })
 
 function warn(rangeE) {
-  rangeE.parentElement.parentElement.classList.add("bg-rose-50");
+  rangeE.parentElement.parentElement.classList.add("bg-cyan-900/50");
 }
 
 function removeWarn(rangeE) {
-  rangeE.parentElement.parentElement.classList.remove("bg-rose-50");
+  rangeE.parentElement.parentElement.classList.remove("bg-cyan-900/50");
 }

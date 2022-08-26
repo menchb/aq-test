@@ -4,7 +4,7 @@ links.forEach((link) => {
 })
 
 function styleBtn(button) {
-   button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-teal-900", "bg-teal-100", "rounded-full", "drop-shadow", "border", "border-teal-700", "transition", "hover:bg-teal-600", "hover:text-teal-50", "hover:border-teal-600", "hover:drop-shadow-xl")
+   button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-cyan-900", "bg-cyan-100", "rounded-full", "drop-shadow", "border", "border-cyan-700", "transition", "hover:bg-cyan-600", "hover:text-cyan-50", "hover:border-cyan-600", "hover:drop-shadow-xl")
 };
 
 styleBtn(testBtn);
@@ -15,7 +15,7 @@ testBtn.addEventListener("click", () => {
 
    const testClassLi = document.querySelectorAll("#testOl li");
    testClassLi.forEach((testClassLi) => {
-      testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg");
+      testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg", "bg-neutral-900");
    })
 
    const answerDivs = document.querySelectorAll("#testOl li div");
