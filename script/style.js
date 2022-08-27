@@ -1,8 +1,3 @@
-const links = document.querySelectorAll("a");
-links.forEach((link) => {
-   link.classList.add("underline", "underline-offset-4")
-})
-
 function styleBtn(button) {
    button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-cyan-900", "bg-cyan-100", "rounded-full", "drop-shadow", "border", "border-cyan-700", "transition", "hover:bg-cyan-600", "hover:text-cyan-50", "hover:border-cyan-600", "hover:drop-shadow-xl")
 };
