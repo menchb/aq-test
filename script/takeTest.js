@@ -46,7 +46,7 @@ const getQuestions = () => {
 var displayTest;
 
 const AVERAGE_ARP_SCORE = 147.5
-const resultSection = document.createElement("section");
+const resultSection = document.querySelector("#resultSection")
 const scoreSpan = document.createElement("span");
 const messageP = document.createElement("p");
 const fbShare = document.createElement("div");
@@ -218,7 +218,6 @@ getQuestions()
             `;
       styleBtn(fbShare);
 
-      main.append(resultSection);
       resultSection.append(computationSection);
       resultSection.append(messageP);
       resultSection.append(scoreSpan);
@@ -230,9 +229,9 @@ getQuestions()
   })
 
 function warn(rangeE) {
-  rangeE.parentElement.parentElement.classList.add("bg-cyan-900/50");
+  rangeE.parentElement.parentElement.classList.add("bg-violet-300/50");
 }
 
 function removeWarn(rangeE) {
-  rangeE.parentElement.parentElement.classList.remove("bg-cyan-900/50");
+  rangeE.parentElement.parentElement.classList.remove("bg-violet-300/50");
 }

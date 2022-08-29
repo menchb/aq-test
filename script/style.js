@@ -10,7 +10,7 @@ testBtn.addEventListener("click", () => {
 
    const testClassLi = document.querySelectorAll("#testOl li");
    testClassLi.forEach((testClassLi) => {
-      testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg", "bg-neutral-900");
+      testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg", "bg-cyan-600/25");
    })
 
    const answerDivs = document.querySelectorAll("#testOl li div");
@@ -33,11 +33,11 @@ testBtn.addEventListener("click", () => {
 
 function styleResults() {
    styleBtn(fbShare);
-   resultSection.classList.add("my-9")
+   resultSection.classList.add("my-9", "py-9")
    computationSection.classList.add("my-9");
-   messageP.classList.add("text-center");
+   messageP.classList.add("text-center", "font-light", "text-3xl");
    scoreSpan.classList.add("text-center");
-   scoreSpan.querySelector("span p:nth-child(2)").classList.add("my-7");
+   scoreSpan.querySelector("span p:nth-child(2)").classList.add("my-7", "py-4", "px-12", "bg-cyan-900", "w-min", "mx-auto", "rounded-full");
    scoreSpan.querySelector("span p span").classList.add("font-light", "text-7xl", "block")
    scoreSpan.querySelector("span div").classList.add("grid", "grid-cols-4", "mb-7")
    const scores = scoreSpan.querySelectorAll("span div span");
@@ -49,8 +49,9 @@ function styleResults() {
          scores[i].classList.add("text-4xl", "font-light");
       }
    }
+   explanationSection.classList.add("bg-cyan-200/25", "rounded-3xl", "p-9", "pt-6", "my-9");
    explanationSection.querySelectorAll("h3").forEach((title) => {
-      title.classList.add("font-light", "text-3xl", "mt-7")
+      title.classList.add("font-light", "text-3xl", "mt-9")
    })
 
 }
