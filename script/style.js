@@ -2,34 +2,34 @@ function styleBtn(button) {
    button.classList.add("w-72", "flex", "justify-center", "mx-auto", "text-2xl", "font-light", "text-cyan-900", "bg-cyan-100", "rounded-full", "drop-shadow", "border", "border-cyan-700", "transition", "hover:bg-cyan-600", "hover:text-cyan-50", "hover:border-cyan-600", "hover:drop-shadow-xl")
 };
 
-styleBtn(testBtn);
+function styleTest() {
+   testBtn.addEventListener("click", () => {
+      const testOl = document.querySelector("#testOl");
+      testOl.classList.add("list-decimal", "ml-5");
 
-testBtn.addEventListener("click", () => {
-   const testOl = document.querySelector("#testOl");
-   testOl.classList.add("list-decimal", "ml-5");
+      const testClassLi = document.querySelectorAll("#testOl li");
+      testClassLi.forEach((testClassLi) => {
+         testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg", "bg-cyan-600/25");
+      })
 
-   const testClassLi = document.querySelectorAll("#testOl li");
-   testClassLi.forEach((testClassLi) => {
-      testClassLi.classList.add("my-9", "pt-3", "px-3", "rounded-lg", "bg-cyan-600/25");
+      const answerDivs = document.querySelectorAll("#testOl li div");
+      answerDivs.forEach((div) => {
+         div.classList.add("my-3", "grid", "justify-items-center", "md:flex", "md:justify-center")
+      })
+
+      const divChildren = document.querySelectorAll("#testOl li div > *");
+      divChildren.forEach((child) => {
+         child.classList.add("block", "my-3", "md:inline")
+      })
+
+      const radios = document.querySelectorAll("#testOl li div input")
+      radios.forEach((radio) => {
+         radio.classList.add("h-8", "w-8", "mx-2")
+      })
+
+      styleBtn(finishBtn);
    })
-
-   const answerDivs = document.querySelectorAll("#testOl li div");
-   answerDivs.forEach((div) => {
-      div.classList.add("my-3", "grid", "justify-items-center", "md:flex", "md:justify-center")
-   })
-
-   const divChildren = document.querySelectorAll("#testOl li div > *");
-   divChildren.forEach((child) => {
-      child.classList.add("block", "my-3", "md:inline")
-   })
-
-   const radios = document.querySelectorAll("#testOl li div input")
-   radios.forEach((radio) => {
-      radio.classList.add("h-8", "w-8", "mx-2")
-   })
-
-   styleBtn(finishBtn);
-})
+}
 
 function styleResults() {
    styleBtn(fbShare);
@@ -53,5 +53,13 @@ function styleResults() {
    explanationSection.querySelectorAll("h3").forEach((title) => {
       title.classList.add("font-light", "text-3xl", "mt-9")
    })
+}
 
+function styleBlogPosts() {
+   linkPreviewsLi.classList.add("grid", "grid-cols-3")
+
+   title.classList.add("text-cyan-50")
+   description.classList.add("text-cyan-50")
+   image.classList.add("text-cyan-50")
+   url.classList.add("text-cyan-50")
 }

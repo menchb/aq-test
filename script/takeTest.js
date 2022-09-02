@@ -1,5 +1,7 @@
 // Disable test button after clicked once
 const testBtn = document.querySelector("#testBtn");
+styleBtn(testBtn);
+styleTest(testBtn);
 testBtn.addEventListener("click", () => {
   testBtn.setAttribute("disabled", "");
 })
